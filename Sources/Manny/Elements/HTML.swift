@@ -7,7 +7,7 @@ public class HTML: Element {
   }
   
   
-  convenience public init(attributes: [Attribute] = [], @HTMLBuilder buildChildren: ()->([Node])) {
+  convenience public init(attributes: Attribute..., @HTMLBuilder buildChildren: ()->([Node])) {
     self.init(attributes: attributes, children: buildChildren())
   }
 }

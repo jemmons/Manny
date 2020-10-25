@@ -9,6 +9,7 @@ public enum Attribute {
   case disabled
   case data(String, String)
   case src(String)
+  case alt(String)
   
   
   func render() -> String {
@@ -20,6 +21,7 @@ public enum Attribute {
     case .disabled: return "disabled"
     case let .data(name, value): return "data-\(name)=\"\(value)\""
     case .src(let s): return "src=\"\(s)\""
+    case .alt(let s): return "alt=\"\(s)\""
     }
   }
 }
